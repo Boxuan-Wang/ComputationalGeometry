@@ -1,5 +1,4 @@
 package TwoD.definition;
 
-public class Point {
-
+public class Polygon {
 }
