@@ -1,8 +1,14 @@
 package IDefinition;
 
 public interface ILine {
-    boolean sameLine(ILine l);
     boolean parallel(ILine l);
-    boolean distance(ILine line);
+
+    double distance(ILine line);
+    double distance(IPoint point);
+    double distance(IRay ray);
+
     IPoint intersect(ILine line);
+    IPoint intersect(IRay ray);
+
+    IVector getDirection();
 }
