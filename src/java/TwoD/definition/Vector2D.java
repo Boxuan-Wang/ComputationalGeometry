@@ -52,7 +52,7 @@ public class Vector2D implements IVector {
     }
 
     @Override
-    public IVector uniform() throws OperationNotSupportedException {
+    public Vector2D uniform() throws OperationNotSupportedException {
         if(modular()==0)
             throw new OperationNotSupportedException("Zero vector.");
         else{
@@ -66,7 +66,7 @@ public class Vector2D implements IVector {
     }
 
     @Override
-    public IVector add(IVector vector) {
+    public Vector2D add(IVector vector) {
         if(vector instanceof Vector2D){
             return new Vector2D(x + ((Vector2D) vector).x, y + ((Vector2D) vector).y);
         }
@@ -74,7 +74,7 @@ public class Vector2D implements IVector {
     }
 
     @Override
-    public IVector multiply(double a) {
+    public Vector2D multiply(double a) {
         return new Vector2D(x*a, y*a);
     }
 
@@ -99,5 +99,9 @@ public class Vector2D implements IVector {
 
     public Vector2D computePerpendicular(){
         return new Vector2D(getY(), -1*getX());
+    }
+
+    public double crossProductMod(Vector2D v){
+        return this.x*v.y - this.y*v.x;
     }
 }
