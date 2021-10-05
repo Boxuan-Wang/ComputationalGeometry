@@ -1,17 +1,13 @@
 package IDefinition;
 
-public interface ILine {
+public interface ILine extends IShape{
     boolean parallel(ILine l);
 
     boolean pass(IPoint point);
 
-    double distance(ILine line);
-    double distance(IPoint point);
-    double distance(IRay ray);
-
-    IPoint intersect(ILine line);
-    IPoint intersect(IRay ray);
-    IPoint intersect(ISegment segment);
+    IShape intersect(ILine line) throws Exception;
+    IShape intersect(IRay ray);
+    IShape intersect(ISegment segment);
 
     IPoint getOnePassPoint();
 

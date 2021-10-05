@@ -104,4 +104,8 @@ public class Vector2D implements IVector {
     public double crossProductMod(Vector2D v){
         return this.x*v.y - this.y*v.x;
     }
+
+    public boolean isZeroVector(){
+        return this.modular()==0;
+    }
 }

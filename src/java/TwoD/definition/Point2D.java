@@ -1,6 +1,7 @@
 package TwoD.definition;
 
 import IDefinition.IPoint;
+import IDefinition.IShape;
 
 import java.util.List;
 
@@ -22,13 +23,13 @@ public class Point2D implements IPoint {
     }
 
     @Override
-    public List<Double> getValues() {
+    public List<Double> toList() {
         return List.of(x,y);
     }
 
     @Override
-    public double distance(IPoint p) {
-        if(p instanceof Point2D point) {
+    public double distance(IShape shape) {
+        if(shape instanceof Point2D point) {
             return Math.sqrt(Math.pow(point.getX()-x,2)+Math.pow(point.getY()-y,2));
         }
         else throw new IllegalArgumentException("Dimension not match.");

@@ -2,18 +2,14 @@ package IDefinition;
 
 import java.util.List;
 
-public interface ISegment {
+public interface ISegment extends IShape{
 
-    IPoint intersect(ISegment segment);
-    IPoint intersect(ILine line);
-    IPoint intersect(IRay ray);
+    IShape intersect(ISegment segment);
+    IShape intersect(ILine line);
+    IShape intersect(IRay ray);
 
     IPoint[] getEnds();
     double getLength();
-
-    double distance(ISegment segment);
-    double distance(ILine line);
-    double distance(IRay ray);
 
     IVector getDirection();
 

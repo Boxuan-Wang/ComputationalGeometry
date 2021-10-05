@@ -6,7 +6,7 @@ public interface IPolygon {
     double getPerimeter();
     double getArea();
 
-    IPolygon intersect(IPolygon polygon);
+    IShape intersect(IPolygon polygon);
 
     double isSimplePolygon();
     double isConvexPolygon();

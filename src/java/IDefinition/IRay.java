@@ -1,17 +1,14 @@
 package IDefinition;
 
-public interface IRay {
+public interface IRay extends IShape{
     boolean parallel(IRay ray);
     boolean pass(IPoint point);
 
-    IPoint intersect(IRay ray);
-    IPoint intersect(ISegment segment);
-    IPoint intersect(ILine line);
-    IPoint getStartPoint();
+    IShape intersect(IRay ray);
+    IShape intersect(ISegment segment);
+    IShape intersect(ILine line);
 
-    double distance(IRay ray);
-    double distance(IPoint point);
-    double distance(ILine line);
+    IPoint getStartPoint();
 
     IVector getDirection();
 
