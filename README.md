@@ -2,6 +2,10 @@
 computational geometry on 2D
 
 ## Problems solved in this part
-1. Define point segment, ray and line.
-2. Tell whether two segments intersect
-3. Tell whether three points co-line
+####1. Definitions
+2D: point, line, ray, segment, vector
+####2. Intersection
+between line, ray and segment
+####3. Distance
+
+
